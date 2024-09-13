@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate String</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🥚 String Scrambler 🍳</h1>
+        <form method="POST">
+            <label for="input_string">Enter string to scramble:</label>
+            <input type="text" id="input_string" name="input_string" value="{{ input_string }}">
+            <button type="submit">Scramble</button>
+        </form>
+
+        {% if translated_output %}
+        <h2>Scrambled String:</h2>
+        <p>{{ translated_output }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
